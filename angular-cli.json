@@ -41,6 +41,7 @@
     }
   },
   "defaults": {
+    "sourceDir": "src",
     "styleExt": "css",
     "prefixInterfaces": false,
     "inline": {
