@@ -1,28 +1,56 @@
-button.github{
+@import url(../../styles.css);
+a.navbar-brand{
+  font-family: MyriadPro-Light;
+  font-weight: 400;
+  font-size: 22px;
+  color : white;
+}
+a.navbar-brand:hover{
+  color : greenyellow;
+}
+.button.github{
+  font-family: MyriadPro-Light;
+  font-weight: 500;
   margin-top: 7px;
   border-style: solid;
-  border-width: 1px;
-  border-color: mediumseagreen;
+  border-width: 1.5px;
+  border-color: white;
   background-color: transparent;
-  color: mediumseagreen;
+  color: white;
   border-radius: 25px;
 }
 
-button.github:hover{
-  color : darkgreen;
-  border-color: darkgreen;
+.button.github:hover{
+  color : greenyellow;
+  border-color: greenyellow;
   cursor: pointer;
 }
-button.github:focus{
-  color : darkgreen;
-  border-color: darkgreen;
+.button.github:focus{
+  color : greenyellow;
+  border-color: greenyellow;
   outline: 0;
 }
 
-button:active {
+.button:active {
   outline: none;
 }
 
+@media screen and (max-width:768px) {
+  a.navbar-brand{
+    font-size: 18px;
+  }
+  nav{
+    height: 50px;
+  }
+}
+@media screen and (max-width:480px) {
+  a.navbar-brand{
+    font-size: 14px;
+  }
+  nav{
+    height: 50px;
+  }
+}
 
 
 

@@ -1,0 +1,16 @@
+<div class="sidebar col-sm-3 col-xs-3">
+  <div class="sidebar-menu">
+    <div *ngFor="let item of data">
+      <b>{{item.head}}</b><br>
+      <span *ngFor="let content of item.content">
+        <input type="checkbox" name="item.head" value="content"
+               (change)="checkedC(item.head,content)" class="checked" id={{content}}>{{content}}<br>
+      </span><br>
+    </div>
+    <button class="btn btn-block btn-primary">Clear All</button>
+  </div>
+</div>
+
+
+
+
