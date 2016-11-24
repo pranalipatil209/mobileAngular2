@@ -1,5 +1,6 @@
 <div class="sidebar col-sm-3 col-xs-3">
   <div class="sidebar-menu">
+    <form>
     <div *ngFor="let item of data">
       <b>{{item.head}}</b><br>
       <span *ngFor="let content of item.content">
@@ -7,7 +8,8 @@
                (change)="checkedC(item.head,content)" class="checked" id={{content}}>{{content}}<br>
       </span><br>
     </div>
-    <button class="btn btn-block btn-primary">Clear All</button>
+    <button class="btn btn-block btn-primary" type="reset" (click)="reset($event)">Clear All</button>
+    </form>
   </div>
 </div>
 

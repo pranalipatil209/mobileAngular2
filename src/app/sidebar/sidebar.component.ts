@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+// import {ngFormModel} from '@angular/forms';
 
 @Component({
     selector: 'sidebar',
@@ -25,31 +26,31 @@ export class sidebarComponent {
           content: [' 5 Mpx', ' 8 Mpx', ' 12 Mpx', ' 15 Mpx']
         }
    ];
-  
+
     public pp = {
       Manufacturer:[],
       Storage:[],
       OS:[],
       Camera:[]
     };
-
     getProperty(filter){
       return this.pp[filter];
     }
     checkedC(filter,val){
         console.log(filter,val);
-        let head = this.getProperty(filter);
+        let key = this.getProperty(filter);
         if ((<HTMLInputElement>document.getElementById(val)).checked === true) {
-            head.push(val);
+            key.push(val);
         }
         else{
             if ((<HTMLInputElement>document.getElementById(val)).checked === false) {
-                let uncheck = head.indexOf(val);
-                head.splice(uncheck,1);
+                let uncheck = key.indexOf(val);
+                key.splice(uncheck,1);
             }
         }
         console.log(this.pp);
     }
-
-
+    reset(){
+        this.reset();
+    }
 }
