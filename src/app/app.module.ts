@@ -6,13 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {navBarComponent} from './navbar/navbar.component';
 import {sidebarComponent} from './sidebar/sidebar.component';
+import {productComponent} from './product/product.component';
+import {productService} from './product/product.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     navBarComponent,
-    sidebarComponent
+    sidebarComponent,
+    productComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,9 @@ import {sidebarComponent} from './sidebar/sidebar.component';
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    productService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

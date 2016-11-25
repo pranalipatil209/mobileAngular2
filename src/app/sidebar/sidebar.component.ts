@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-// import {ngFormModel} from '@angular/forms';
 
 @Component({
     selector: 'sidebar',
@@ -50,7 +49,12 @@ export class sidebarComponent {
         }
         console.log(this.pp);
     }
-    reset(){
-        this.reset();
+    clearA(){
+        this.pp = {
+          Manufacturer:[],
+          Storage:[],
+          OS:[],
+          Camera:[]
+        }
     }
 }
